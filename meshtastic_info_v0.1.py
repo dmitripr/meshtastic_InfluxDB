@@ -110,6 +110,6 @@ for key, value in parsed_json.items():
         print(append_string)
         data.append(append_string) ### Append the node data to be uploaded
 
-client.write(data,{'db':'meshtastic'},protocol='line') ### Upload to DB information of all recent nodes
+client.write(data,{'db':INFLUXDB_DB},protocol='line') ### Upload to DB information of all recent nodes
 
 print("Success!")
